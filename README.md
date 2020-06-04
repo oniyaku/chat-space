@@ -27,8 +27,8 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
@@ -44,37 +44,28 @@ Things you may want to cover:
 
 ### Association
 - has_many :groups_users
-- has_many :groups
-- has_many :comments
+- has_many :groups, through:groups_users
+- has_many :messages
 - has_many :images
 
 ## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|group_id|integer|null: false|
-|group_name|integer|null: false|
+|name|integer|null: false|
 
 ### Association
 - has_many :groups_users
-- has_many :users
-
-## imagesテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|image|text||
-|user_id|integer|null: false, foreign_key: true|
-
-### Association
-- belongs_to :users
+- has_many :users, through:groups_users
 
 ## messagesテーブル
-
 |Column|Type|Options|
 |------|----|-------|
 |text|text||
-|user_id|integer|null: false, foreign_key: true|
+|image|text||
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :users
+- belongs_to :user
+- belongs_to :group
