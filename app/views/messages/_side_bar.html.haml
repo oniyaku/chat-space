@@ -1,0 +1,21 @@
+.Side-ber
+  .Side-ber__user-name
+    .User-name__side-box
+      %p.Sidebox__user-name masa
+      %ul.Side-box__menu
+        %li.Menu__new-group
+        =link_to "#" do
+          =icon('fas', 'edit', class: 'icon')
+        %li.Menu__edit-user
+        =link_to "#" do
+          =icon('fa', 'cog', class: 'icon')
+  .Side-ber__group-list
+    .Group
+      .Group__name techcamp
+      .Group__message まだメッセージがありません
+    .Group
+      .Group__name test
+      .Group__message まだメッセージがありません!
+    .Group
+      .Group__name test
+      .Group__message まだメッセージがありません!
