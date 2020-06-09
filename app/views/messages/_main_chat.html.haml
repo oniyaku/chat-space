@@ -1,0 +1,32 @@
+.Chat-main
+  .Chat-main__group-info
+    .Info__group-name
+      .Info__name テスト
+      %ul.Info__group-member
+        %li.Info__member-list Member : masa
+    .Info__edit-btn
+      =link_to "#" do
+        Edit
+  .Chat-main__message-list
+    .MessageBox
+      .MessageInfo
+        .MessageInfo__userName masa
+        .MessageInfo__date 2020/01/01(Wed) 11:00:00
+      .Message
+        %p.Message__content おはよう
+      .MessageInfo
+        .MessageInfo__userName masa
+        .MessageInfo__date 2020/01/01(Wed) 11:00:00
+      .Message
+        %p.Message__content おはよう
+  .Chat-main__message-form
+    .main-header
+    .messages
+    .form
+      %form.new_message
+        .input-box
+        %input{type: "text", class: "input-box__text", placeholder: "type a message"}
+        %label{class: "input-box__image"}
+          =icon('far', 'image')
+          %input{type:"file", class: "input-box__image__file",name: "message[image]"}
+      %input{type: "submit", class: "submit-btn", name: "commit", value: "Send"}
