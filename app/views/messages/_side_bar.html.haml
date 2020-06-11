@@ -1,8 +1,8 @@
 .Side-ber
   .Side-ber__user-name
     .User-name__side-box
-      %p.Sidebox__user-name masa
-      = current_user.name
+      %h2.Sidebox__user-name
+        = current_user.name
       %ul.Side-box__menu
         %li.Menu__new-group
         =link_to new_group_path do
@@ -13,8 +13,8 @@
   .Side-ber__group-list
     - current_user.groups.each do |group|
       .Group
-      = link_to '#' do
-        .Group__name
-          = group.name
-        .Group__message 
-          まだメッセージがありません
+        = link_to group_messages_path(group) do
+          .Group__name
+            = group.name
+          .Group__message
+            = group.show_last_message

@@ -22,7 +22,12 @@
         display: flex;
         justify-content: space-between;
         font-weight: bold;
-        color: #ffffff;
+
+        h2 {
+          color: #ffffff;
+          font-size: 16px;
+          font-weight: bold;
+        }
         .Side-box__menu {
           width: 60px;
           display: flex;
@@ -47,13 +52,16 @@
       padding: 0 20px;
       .Group {
         padding: 20px 0 40px;
-        color: #ffffff;
+        a {
+          color: #ffffff;
+        }
         &__name {
           font-size: 15px;
         }
         &__message {
           font-size: 11px;
           margin-top: 5px;
+
         }
       }
     }
@@ -80,12 +88,14 @@
       .Info__edit-btn {
         display: block;
         border: 1px solid #38AEF0;
-        color: #38AEF0;
         height: 40px;
         line-height: 40px;
         margin-top: 28px;
         padding: 0 20px;
         text-decoration: none;
+        a {
+          color: #38AEF0;
+        }
       }
     }
     .Chat-main__message-list {
@@ -140,8 +150,8 @@
               position: absolute;
               height: 50px;
               margin-left: 10px;
-              bottom: 14px;
-              right: 175px;
+              top: 6px;
+              right: 10px;
               font-size: 25px;
               &__file {
                 display: none;
@@ -161,7 +171,4 @@
       }
     }
   }
-}
-a {
-  color: #ffffff;
 }
