@@ -99,6 +99,7 @@
       }
     }
     .Chat-main__message-list {
+      overflow: scroll;
       background-color: #fafafa;
       height: calc(100vh - 100px - 90px);
       .MessageBox {
