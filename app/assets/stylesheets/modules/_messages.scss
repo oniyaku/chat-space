@@ -80,10 +80,14 @@
         color: #333333;
         margin-top: 35px;
       }
-      .Info__member-list {
+      .Info__group-member {
         font-size: 12px;
         color: #999999;
         margin-top: 15px;
+        display: flex;
+      }
+      .Info__member-list {
+
       }
       .Info__edit-btn {
         display: block;
