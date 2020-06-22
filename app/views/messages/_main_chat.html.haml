@@ -10,7 +10,7 @@
             = user.name
 
     .Info__edit-btn
-      =link_to edit_group_path(current_user) do
+      =link_to edit_group_path(@group.id) do
         Edit
   .Chat-main__message-list
     = render @messages
